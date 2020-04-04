@@ -20,7 +20,11 @@ class Artist
   
   def self.song_count
     count = 0
-    Song.all.collect{ |song| song.artist ? count += 1 }
+    Song.all.collect do |song| 
+      if song.artist
+        count += 1
+      end
+    end
     count
   end
 end
