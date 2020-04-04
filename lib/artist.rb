@@ -6,7 +6,7 @@ class Artist
   end
   
   def songs
-    Songs.all.artist == self
+    Song.all.artist == self
   end
   
   def add_song(song)
