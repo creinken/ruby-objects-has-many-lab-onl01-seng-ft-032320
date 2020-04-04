@@ -19,6 +19,8 @@ class Artist
   end
   
   def self.song_count
-    
+    count = 0
+    Song.all.collect |song| { song.artist ? count += 1 }
+    count
   end
 end
